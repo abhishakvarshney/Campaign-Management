@@ -1,5 +1,5 @@
 {
-  "name": "knoldus-login-application",
+  "name": "login-application",
   "description": "Login Application in node.js and mongodb",
   "version": "0.0.1",
   "main": "server.js",
