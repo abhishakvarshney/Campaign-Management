@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Campaign ROI Analysis Report</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/png" href="images/icons/favicon.ico"/>
+  <link rel="stylesheet" type="text/css" href="fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" type="text/css" href="fonts/Linearicons-Free-v1.0.0/icon-font.min.css">
+  <link rel="stylesheet" type="text/css" href="css/main.css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <style>
+  .navbar {
+      margin-bottom: 0;
+      border-radius: 0;
+    }
+	.background {
+		background-image: url('images/bg-01.jpg');
+	}
+nav { width: 100%; text-align: center; }
+nav a { 
+	display: block; 
+	padding: 15px 0;
+	border-bottom: solid lightgrey;
+	color: black;
+}
+
+.menu {
+	width: 100px;
+	height: 100%;
+	position: absolute;
+	background: lightgrey;
+	left: -240px;
+	transition: all .3s ease-in-out;
+	-webkit-transition: all .3s ease-in-out;
+	-moz-transition: all .3s ease-in-out;
+	-ms-transition: all .3s ease-in-out;
+	-o-transition: all .3s ease-in-out;
+}
+.menu-icon {
+	color: lightgrey;
+	cursor: pointer;
+	float: right;
+	border-radius: 3px;
+}
+#menuToggle { display: none; }
+#menuToggle:checked ~ .menu { position: absolute; left: 0; }
+ </style>
+</head>
+<body>
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="collapse navbar-collapse" id="myNavbar">
+	
+	  <ul class="nav navbar-nav navbar-right">
+        <li><a href="index.html"><span class="glyphicon glyphicon-log-out"></span>Logout</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+ <div class="background container-login">
+ <div class="container"> 
+ <input type="checkbox" id="menuToggle">
+     <label for="menuToggle" class="menu-icon" style="font-size:30px; color:LightGrey;margin-top: -32%;margin-right: -15%;">&#9783;</label>
+     <nav class="menu"style="margin-top: -23.4%;">
+	 <ul>
+    	<li style="font-family:Ubuntu-Bold;"><a href="Add.html">ADD</a></li>
+        <li style="font-family:Ubuntu-Bold;"><a href="Update.html">UPDATE</a></li>
+        <li style="font-family:Ubuntu-Bold;"><a href="Delete.html">DELETE</a></li>
+     </ul>
+     </nav>
+<div class="login-form-title">
+<h2 style="color:white; margin-left:15%; margin-right: 15%; margin-bottom:60%;margin-top: -30%;">Campaign ROI Analysis Report</h2><br></div>
+<div style="font-family:ubuntu-regular; color: white; text-align: center;margin-top:-50%;">The Campaign ROI Analysis Report calculates the return on investment and average costs for your campaigns.</div><br></br><br></br>
+<form action="/roi" method="get">
+<table style="width:100%;text-align: center;font-family:ubuntu-regular;margin-bottom: -35%;">
+  <tr style="border: 1px solid white;">
+    <th style="border: 1px solid white;text-align: center;color: white;">Campaign Name</th>
+    <th style="border: 1px solid white;text-align: center;color: white;">Campaign Type</th>
+    <th style="border: 1px solid white;text-align: center;color: white;">Campaign Status</th>
+	<th style="border: 1px solid white;text-align: center;color: white;">Start Date</th>
+	<th style="border: 1px solid white;text-align: center;color: white;">Num Sent</th>
+	<th style="border: 1px solid white;text-align: center;color: white;">Total Responses</th>
+	<th style="border: 1px solid white;text-align: center;color: white;">Num Total Opportunities</th>
+	<th style="border: 1px solid white;text-align: center;color: white;">Num Won Opportunities</th>
+	<th style="border: 1px solid white;text-align: center;color: white;">Total Value Won Opportunities</th>
+	<th style="border: 1px solid white;text-align: center;color: white;">Actual Cost</th>
+	<th style="border: 1px solid white;text-align: center;color: white;">ROI(%)</th>
+  </tr>
+  <tr style="border: 1px solid white;">
+    <td style="border: 1px solid white;color: white;">Event1</td>
+    <td style="border: 1px solid white;color: white;">Demo</td>
+	<td style="border: 1px solid white;color: white;">Completed</td>
+	<td style="border: 1px solid white;color: white;">04/06/2018</td>
+	<td style="border: 1px solid white;color: white;">40000</td>
+	<td style="border: 1px solid white;color: white;">9</td>
+	<td style="border: 1px solid white;color: white;">1</td>
+	<td style="border: 1px solid white;color: white;">1</td>
+	<td style="border: 1px solid white;color: white;">69500</td>
+	<td style="border: 1px solid white;color: white;">1000</td>
+	<td style="border: 1px solid white;color: white;">6850</td>
+  </tr>
+  <tr style="border: 1px solid white;">
+    <td style="border: 1px solid white;color: white;">Event2</td>
+    <td style="border: 1px solid white;color: white;">Demo</td>
+	<td style="border: 1px solid white;color: white;">Completed</td>
+	<td style="border: 1px solid white;color: white;">06/04/2018</td>
+	<td style="border: 1px solid white;color: white;">0</td>
+	<td style="border: 1px solid white;color: white;">19</td>
+	<td style="border: 1px solid white;color: white;">6</td>
+	<td style="border: 1px solid white;color: white;">2</td>
+	<td style="border: 1px solid white;color: white;">35775</td>
+	<td style="border: 1px solid white;color: white;">2500</td>
+	<td style="border: 1px solid white;color: white;">1331</td>
+  </tr>
+</table></form>
+</div>
+</div>
+</body>
+</html>

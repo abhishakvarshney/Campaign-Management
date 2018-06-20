@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Update Information</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/png" href="images/icons/favicon.ico"/>
+  <link rel="stylesheet" type="text/css" href="fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" type="text/css" href="fonts/Linearicons-Free-v1.0.0/icon-font.min.css">
+  <link rel="stylesheet" type="text/css" href="css/main.css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <style>
+  .navbar {
+      margin-bottom: 0;
+      border-radius: 0;
+    }
+	.background {
+		background-image: url('images/bg-01.jpg');
+	}
+nav { width: 100%; text-align: center; }
+nav a { 
+	display: block; 
+	padding: 15px 0;
+	border-bottom: solid LightGrey;
+	color: Black;
+}
+
+.menu {
+	width: 100px;
+	height: 100%;
+	position: absolute;
+	background: LightGrey;
+	left: -240px;
+	transition: all .3s ease-in-out;
+	-webkit-transition: all .3s ease-in-out;
+	-moz-transition: all .3s ease-in-out;
+	-ms-transition: all .3s ease-in-out;
+	-o-transition: all .3s ease-in-out;
+}
+.menu-icon {
+	color: LightGrey;
+	cursor: pointer;
+	float: right;
+	border-radius: 7px;
+}
+#menuToggle { display: none; }
+#menuToggle:checked ~ .menu { position: absolute; left: 0; }
+ </style>
+</head>
+<body>
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="collapse navbar-collapse" id="myNavbar">
+	
+	  <ul class="nav navbar-nav navbar-right">
+        <li><a href="index.html"><span class="glyphicon glyphicon-log-out"></span> Logout</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+ <div class="background container-login">
+ <div class="container"> 
+ <input type="checkbox" id="menuToggle">
+     <label for="menuToggle" class="menu-icon" style="font-size:30px; color:LightGrey;margin-top:-22%; margin-right: -15%;">&#9783;</label>
+     <nav class="menu"style="margin-top: -18.1%;">
+	 <ul>
+    	<li style="font-family:Ubuntu-Bold;"><a href="Add.html">ADD</a></li>
+        <li style="font-family:Ubuntu-Bold;"><a href="Update.html">UPDATE</a></li>
+        <li style="font-family:Ubuntu-Bold;"><a href="Delete.html">DELETE</a></li>
+     </ul>
+     </nav>
+<div class="login-form-title">
+<h2 style="color:white; margin-left:15%; margin-right: 15%; margin-bottom:60%;margin-top:-20%;">Update Information</h2><br></div>
+<div style= "margin-left:15%; margin-right: 15%; margin-top: -40%;">
+<form action="/Update" method="post" enctype="multipart/form-data">
+<select name="Service Group"> 
+  <option value="Aeps">Aeps</option>
+  <option value="Bill">Bill</option>
+  <option value="Cashout">Cashout</option>
+  <option value="Collection">Collection</option>
+  <option value="Digital Wallet">Digital Wallet</option>
+  <option value="Egovernance">Egovernance</option>
+  <option value="Evd">Evd</option>
+  <option value="Flexi">Flexi</option>
+  <option value="Hotel">Hotel</option>
+  <option value="Insurance">Insurance</option>
+  <option value="Mr">Mr</option>
+  <option value="Pw Shopping">Pw Shopping</option>
+  <option value="Ticketing">Ticketing</option>
+</select>
+        <input type="text" placeholder="Update by Campaign Name" name="update" size= 75 >
+        <button type="update"style="background-color:white;font-family:Ubuntu-Bold;">  Update </button></form><br></br><br></br>
+
+</div>
+</div>
+</div>
+</body>
+</html>
